@@ -1,0 +1,900 @@
+<!doctype html>
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+<html class="no-js" lang="zxx">
+   
+<!-- Mirrored from wphix.com/html/dustrilox/dustrilox/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 11:45:44 GMT -->
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Dustrilox - Construction & Industry HTML5 Template </title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png' %}">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <!-- CSS here -->
+      <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/meanmenu.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/owl-carousel.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/swiper-bundle.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/backtotop.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/font-awesome-pro.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/spacing.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+   </head>
+   <body>
+      <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+
+      <!-- Preloader -->
+      <div class="preloader"></div>
+      <!-- pre loader area end -->
+
+      <!-- back to top start -->
+      <div class="progress-wrap">
+         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+         </svg>
+      </div>
+      <!-- back to top end -->
+      
+      <!-- header-area-start -->
+      <header id="header-sticky" class="header-area">
+         <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-xl-2 col-lg-2 col-md-6 col-6">
+                     <div class="logo-area">
+                           <div class="logo">
+                              <a href="{% url 'home' %}" style="display: flex;justify-content:center;align-items:center; width:100%;"><img style="width:30%;filter:opacity(0.8);height:40px;" src="{% static 'azgp_logo2.png' %}" alt=""><div style="display: grid;line-height:14px;color:white;font-weight:600;margin-left:10px;"><span>AzGP</span><span>Engineering</span></div></a>
+                           </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-8 col-md-6 col-6">
+                     <div class="menu-area menu-padding">
+                           <div class="main-menu">
+                              <nav id="mobile-menu">
+                                 <ul>
+                                    <li ><a href="{% url 'home' %}">Ana Səhifə</a>
+                                      
+                                    </li>
+                                    <li><a href="{% url 'services' %}">Xidmətlərimiz</a>
+                                      
+                                    </li>
+                                    <li ><a href="{% url 'about' %}">Haqqımızda</a>
+                                      
+                            
+                  
+                          
+                                       <li><a href="{% url 'portfolio' %}">Portfolia</a></li>
+                                   
+                                       <!-- class="has-dropdown" -->
+                                   
+                                
+                                    <li ><a href="{% url 'blog' %}">Məqalələr</a>
+                                       
+                                    
+                                    <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+                                 </ul>
+                              </nav>
+                           </div>
+                     </div>
+                     <div class="side-menu-icon d-lg-none text-end">
+                        <a href="javascript:void(0)" class="info-toggle-btn f-right sidebar-toggle-btn"><i class="fal fa-bars"></i></a>
+                     </div>
+                  </div>
+                  <div class="col-xl-1 col-lg-2 d-none d-lg-block">
+                     <div class="header-info f-right">
+                        <div class="dinozavr"
+                        style="display:flex;align-items:center;justify-content:center;gap:2rem;">
+                        <div id="lang_selector" class="language-dropdown">
+                            <label for="toggle" class="lang-flag lang-en" title="Click to select the language">
+                                <span class="flag"></span>
+                            </label>
+                            <ul class="lang-list">
+                                <li class="lang lang-en selected" title="AZ">
+                                    <span class="flag"></span>
+                                </li>
+                                <li class="lang lang-pt" title="RU">
+                                    <span class="flag"></span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <a href="#0" class="fm-header-bar-1" id="ancaqmobile">
+                            <span class="fm-header-bar-line fm-header-bar-line-1"></span>
+                            <span class="fm-header-bar-line fm-header-bar-line-2"></span>
+                            <span class="fm-header-bar-line fm-header-bar-line-3"></span>
+                        </a>
+                        <!-- <img src=" {% static 'russia.png' %}" alt="">
+               
+                {% static 'azerbaijan.png' %} -->
+
+
+                    </div>
+                    <style>
+                        .shadow-1,
+                        .language-dropdown ul.lang-list,
+                        .language-dropdown label {
+                            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        }
+
+                        .shadow-2,
+                        .language-dropdown.open label {
+                            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                        }
+
+                        .shadow-3 {
+                            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                        }
+
+                        .shadow-4 {  
+                            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                        }
+
+                        .shadow-5 {
+                            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+                        }
+
+                        .language-dropdown {
+                            display: inline-block;
+                            overflow: hidden;
+                            height: 40px;
+
+                        }
+
+                        .language-dropdown .lang-en {
+                            border-left: 4px solid rgb(24, 24, 24);
+                        }
+
+                        .language-dropdown .lang-en .flag {
+                            background-image: url("{% static 'azerbaijan.png' %}");
+                        }
+
+                        .language-dropdown .lang-pt {
+                            border-left: 4px solid rgb(24, 24, 24);
+                        }
+
+                        .language-dropdown .lang-pt .flag {
+                            background-image: url("{% static 'english.jpg' %}");
+                            height: 60%;
+                        }
+
+                        .language-dropdown .lang-es {
+                            border-left: 4px solid rgb(24, 24, 24);
+                        }
+
+                        .language-dropdown .lang-es .flag {
+                            background-image: url("http://www.imaginarium.pt/responsive/2015/images/iconsFicha/banderaES.png");
+                        }
+
+                        .language-dropdown label,
+                        .language-dropdown ul li {
+                            display: block;
+                            width: 50px;
+                            height: 38px;
+                            background: rgb(25, 25, 25);
+                            padding: 0px 6px;
+                            cursor: pointer;
+                        }
+
+                        .language-dropdown ul.lang-list {
+                            position: relative;
+                            visibility: hidden;
+                            opacity: 0;
+                            z-index: 1;
+                        }
+
+                        .language-dropdown ul.lang-list li {
+                            border-bottom: 1px solid rgb(24, 24, 24);
+                        }
+
+                        .language-dropdown ul.lang-list li:last-child {
+                            border-bottom-right-radius: 2px;
+                            border-bottom-left-radius: 2px;
+                        }
+
+                        .language-dropdown ul.lang-list li.selected {
+                            display: none;
+                        }
+
+                        .language-dropdown label {
+                            position: relative;
+                            border-bottom: 1px solid rgb(24, 24, 24);
+                            border-radius: 3px;
+                            z-index: 2;
+                        }
+
+                        .language-dropdown .lang-flag .flag,
+                        .language-dropdown .lang-list .lang .flag {
+                            float: left;
+                            width: 100%;
+                            height: 100%;
+                            cursor: pointer;
+                            background-size: 35px 35px;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+
+                        .language-dropdown.open ul.lang-list {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+
+                        .language-dropdown.open label {
+                            border-bottom-left-radius: 0px;
+                            border-bottom-right-radius: 0px;
+                        }
+
+                        .animate,
+                        .lang-flag,
+                        .lang-list {
+                            cursor: pointer;
+                            -webkit-transition: all 0.5s;
+                            -moz-transition: all 0.5s;
+                            -ms-transition: all 0.5s;
+                            -ms-transition: all 0.5s;
+                            transition: all 0.5s;
+                            backface-visibility: hidden;
+                            -webkit-backface-visibility: hidden;
+                            -moz-backface-visibility: hidden;
+                            -ms-backface-visibility: hidden;
+                        }
+                    </style>
+                    <script>
+                       
+                     $(document).ready(function () {
+                         $(".lang-flag").click(function () {
+                             $(".language-dropdown").toggleClass("open");
+                             $(".language-dropdown").css(
+                                 { 'overflow': 'visible' }
+                             )
+                         });
+
+                         $("ul.lang-list li").click(function () {
+                             $("ul.lang-list li").removeClass("selected");
+                             $(this).addClass("selected");
+                             if ($(this).hasClass('lang-en')) {
+                                 $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-pt");
+                                 $("#lang_selected").html("<p>AZ</p>")
+                                 window.location.href='/'
+                             } else if ($(this).hasClass('lang-pt')) {
+                                 $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
+                                 $("#lang_selected").html("<p>RU</p>")
+                                 window.location.href='/en'
+                             } 
+                             $(".language-dropdown").removeClass("open");
+                         });
+                     })
+                     $(document).click(function (e) {
+                         if (!$(e.target).closest(".language-dropdown").length) {
+                             $(".language-dropdown").removeClass("open");
+                         }
+                     });
+                 </script>
+                 <script>
+                     var currentURL = "{{ request.build_absolute_uri }}";
+                     if (currentURL.endsWith('en/')) {
+                         $("ul.lang-list li").removeClass("selected");
+                   
+                         
+                         $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
+                         $("#lang_selected").html("<p>RU</p>")
+                         $("ul.lang-list li.lang-pt").remove();
+                     }
+                 </script>
+                           
+                           
+                     </div>
+                  </div>
+               </div>
+         </div>
+      </header>
+      <!-- header-area-end -->
+
+      <!-- sidebar area start -->
+      <div class="sidebar__area">
+         <div class="sidebar__wrapper">
+            <div class="sidebar__close">
+               <button class="sidebar__close-btn" id="sidebar__close-btn">
+                  <i class="fal fa-times"></i>
+               </button>
+            </div>
+            <div class="sidebar__content">
+               <div class="sidebar__logo mb-40">
+                  <a href="{% url 'home' %}">
+                  <img src="{% static 'azgp_logo2.png' %}" alt="logo">
+                  </a>
+               </div>
+               <div class="sidebar__search mb-25">
+                  <form action="#">
+                     <input type="text" placeholder="What are you searching for?">
+                     <button type="submit" ><i class="far fa-search"></i></button>
+                  </form>
+               </div>
+               <div class="mobile-menu fix"></div>
+               <div class="sidebar__contact mt-30 mb-20">
+                  <h4>Contact Info</h4>
+                  <ul>
+                     <li class="d-flex align-items-center">
+                        <div class="sidebar__contact-icon mr-15">
+                           <i class="fal fa-map-marker-alt"></i>
+                        </div>
+                        <div class="sidebar__contact-text">
+                           <a >Azərbaycan, Bakı şəhəri, Nobel prospekti,15, 8-ci mərtəbə  </a>
+                        </div>
+                     </li>
+                     <li class="d-flex align-items-center">
+                        <div class="sidebar__contact-icon mr-15">
+                           <i class="far fa-phone"></i>
+                        </div>
+                        <div class="sidebar__contact-text">
+                           <a href="tel:994507038185">994507038185</a>
+                        </div>
+                     </li>
+                     <li class="d-flex align-items-center">
+                        <div class="sidebar__contact-icon mr-15">
+                           <i class="fal fa-envelope"></i>
+                        </div>
+                        <div class="sidebar__contact-text">
+                           <a href="https://azgpenginee@gmail.com"><span class="__cf_email__" >azgpenginee@gmail.com</span></a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+       
+            </div>
+         </div>
+      </div>
+      <!-- sidebar area end -->     
+      <div class="body-overlay"></div>
+      <!-- sidebar area end --> 
+ 
+      <main>
+
+      <!-- slider-area-start  -->
+      <section class="slider-area fix">
+         <div class="swiper main-slider swiper-container swiper-container-fade">
+            <div class="swiper-wrapper p-relative">
+               {% for head in headers %}
+               <div class="item-slider sliderm-height p-relative swiper-slide">
+                  <div class="slide-bg" data-background="{{head.mainimage.url}}"></div>
+                  <div class="container">
+                     <div class="row ">
+                        <div class="col-lg-12">
+                           <div class="slider-contant mt-25">
+                               <span data-animation="fadeInUp" data-delay=".3s">{{head.minititle}}</span>
+                               <h2 class="slider-title" data-animation="fadeInUp" data-delay=".6s">{{head.title}}</h2> 
+                               <div class="slider-button" data-animation="fadeInUp" data-delay=".9s">
+                                   <a href="{% url 'services' %}" class="tp-btn mr-30">Xidmələrimiz<i class="fal fa-angle-right"></i></a>
+                                   <a href="{% url 'about' %}" class="tp-btn-2">Daha ətraflı</a>
+                               </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev ms-button"><i class="far fa-long-arrow-left"></i></div>
+            <div class="swiper-button-next ms-button"><i class="far fa-long-arrow-right"></i></div>
+         </div>
+      </section>
+      <!-- slider-area-end -->
+
+
+      <!-- Swiper Dot end -->
+
+      <!-- about__area start -->
+      <section class="about__area pt-120 pb-90">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-6 col-lg-6">
+                  <div class="ab-tab-info mb-30">
+                     <div class="ab-image w-img">
+                        <img src="{{about.image.url}}" alt="">
+                     </div>
+                     <div class="absp-text absp-text-1">
+                        <i class="flaticon-windmill"></i>
+                        <div class="absp-info">
+                           <h5><span class="counter">{{about.project_done}}</span>+</h5>
+                           <span class="absm-title">bitirilmiş proekt</span>
+                        </div>
+                     </div>
+                     <div class="absp-text absp-text-2">
+                        <i class="flaticon-container-1"></i>
+                        <div class="absp-info">
+                           <h5><span class="counter">{{about.happy_customer}}</span>+</h5>
+                           <span class="absm-title">müştəri</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6">
+                  <div class="ab-left-content">
+                     <div class="section__wrapper mb-30">
+                        <h4 class="section__title">{{about.title}}</h4>
+                        <div class="r-text">
+                           <span>Haqqımızda</span>
+                        </div>
+                     </div>
+                     <p class="abd-text">{{about.description}}.</p>
+                     <div class="ab-button mb-30">
+                        <a href="{% url 'about' %}" class="tp-btn">Daha ətrafı</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- about__area end -->
+
+
+
+      <!-- sd-banner-area start -->
+      <!-- <section class="sd-banner-area pb-110">
+         <div class="banner__slider swiper-container">
+            <div class="banner__wrapper swiper-wrapper">
+               <div class="sd-banner__item swiper-slide" data-background="{% static 'assets/img/banner/banner-01.jpg' %}">
+                  <div class="container-0">
+                     <div class="row g-0">
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height">
+                           <div class="slide-border"></div>
+                           <div class="sd-content">
+                              <span class="sd-meta">Industry, Manufacturing</span>
+                              <h5><a href="portfolio-details.html">Genvar Eco Park</a></h5>
+                              <div class="project-info"> 
+                                 <a href="portfolio-details.html"><i class="fal fa-plus"></i></a>
+                                 <span><a href="portfolio-details.html">Project Details</a></span>
+                              </div>
+                              <div class="sd-bg-icon">
+                                 <i class="flaticon-industrial"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sd-banner__item swiper-slide" data-background="{% static 'assets/img/banner/banner-02.jpg' %}">
+                  <div class="container-0">
+                     <div class="row g-0">
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height">
+                           <div class="slide-border"></div>
+                           <div class="sd-content">
+                              <span class="sd-meta">Industry, Manufacturing</span>
+                              <h5><a href="portfolio-details.html">Denvar Eco Park</a></h5>
+                              <div class="project-info"> 
+                                 <a href="portfolio-details.html"><i class="fal fa-plus"></i></a>
+                                 <span><a href="portfolio-details.html">Project Details</a></span>
+                              </div>
+                              <div class="sd-bg-icon">
+                                 <i class="flaticon-industrial"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sd-banner__item swiper-slide" data-background="{% static 'assets/img/banner/banner-03.jpg' %}">
+                  <div class="container-0">
+                     <div class="row g-0">
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height">
+                           <div class="slide-border"></div>
+                           <div class="sd-content">
+                              <span class="sd-meta">Industry, Manufacturing</span>
+                              <h5><a href="portfolio-details.html">Natural Eco Park</a></h5>
+                              <div class="project-info"> 
+                                 <a href="portfolio-details.html"><i class="fal fa-plus"></i></a>
+                                 <span><a href="portfolio-details.html">Project Details</a></span>
+                              </div>
+                              <div class="sd-bg-icon">
+                                 <i class="flaticon-industrial"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sd-banner__item swiper-slide" data-background="{% static 'assets/img/banner/banner-04.jpg' %}">
+                  <div class="container-0">
+                     <div class="row g-0">
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height">
+                           <div class="slide-border"></div>
+                           <div class="sd-content">
+                              <span class="sd-meta">Industry, Manufacturing</span>
+                              <h5><a href="portfolio-details.html">Angency Eco Park</a></h5>
+                              <div class="project-info"> 
+                                 <a href="portfolio-details.html"><i class="fal fa-plus"></i></a>
+                                 <span><a href="portfolio-details.html">Project Details</a></span>
+                              </div>
+                              <div class="sd-bg-icon">
+                                 <i class="flaticon-industrial"></i>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                        <div class="col-xl-3 banner-slide-height d-none d-xl-block">
+                           <div class="slide-border"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>  -->
+      <!-- sd-banner-area end -->
+
+      <!-- brand__area start -->
+      <section class="brand__area pb-120">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="brand__title text-center">
+                     <span>Tərəfdaşlarımız</span>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="brand__slider swiper-container">
+                     <div class="swiper-wrapper">
+                        {% for partner in partners %}
+                        <div class="brand__slider-item swiper-slide">
+                           <a href="#"><img src="{{partner.image.url}}" alt=""></a>
+                        </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- brand__area end -->
+
+      <!-- feature__area start -->
+      <section class="feature__area pb-80">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-6 col-lg-6">
+                  <div class="feature__left mb-40">
+                     <div class="section__wrapper mb-45">
+                        <h4 class="section__title" style="margin-left:3%;">Artıq illərdiki, öz keyfiyyətimizlə sizlərin xidmətindəyik.</h4>
+                        <div class="r-text">
+                           <span>Xidmətlərimiz</span>
+                        </div>
+                     </div>
+                     <div class="feature__list">
+                        <ul>
+                           
+                           {% for service in services %}
+                           <li><a href="#">{{service.name}}<i class="fa-light fa-arrow-right-long"></i></a></li>
+                           {% endfor %}
+                
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6">
+                  <div class="feature__images w-img mb-40">
+                     <img src="{% static 'assets/img/feature/fet-01.jpg' %}" alt="">
+                     <div class="vide-button">
+                        <a href="https://www.youtube.com/watch?v=o4GuSJYSzrY" class="popup-video"><i class="fa-solid fa-play"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- feature__area end -->
+
+      <!-- testimonial__area start -->
+      <section class="testimonial__area grey-bg-5 pt-120 pb-120 fix">
+         <div class="testimonial__right-bg">
+            <img src="{% static 'assets/img/testimonial/testimonial-bg-1.jpg' %}" alt="">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6">
+                  <div class="section__wrapper mb-45">
+                     <h4 class="section__title">Yüksək standartlara cavab verən cihazlar...</h4>
+                     <div class="r-text">
+                        <span>Texnologiya</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-12">
+                  <div class="testimonial__slider swiper-container">
+                     <div class="testimonial__wrapper swiper-wrapper">
+                        {% for equip in equips %}
+                        <div class="testimonial__item swiper-slide">
+                           <p class="review__text">{{equip.description}}</p>
+                           <div class="review__info mt-30">
+                              <a href="#"><img style="width:70px;height:50px;" src="{{equip.image.url}}" alt=""></a>
+                              <div class="client__content">
+                                 <h5 class="client__name"><a href="#">{{equip.title}}</a></h5>
+                                 <div class="client__designation"><p>Sahə: <a href="#">{{equip.field}}</a></p></div>
+                              </div>
+                           </div>
+                        </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- testimonial__area end -->
+
+      <!-- team__area start -->
+
+      <!-- team__area end -->
+
+      <!-- process__area start -->
+      <section class="process__area pb-100" style="margin-top:5%;">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6">
+                  <div class="process__images">
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <div class="image-1 w-img">
+                              <img src="{% static 'assets/img/process/process-1.jpg' %}" alt="">
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                           <div class="image-2 w-img">
+                              <img src="{% static 'assets/img/process/process-2.jpg' %}" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6">
+                  <div class="process__right">
+                     <div class="section__wrapper mb-55">
+                        <h4 class="section__title">Gördüyümüz işlər</h4>
+                        <div class="r-text">
+                           <span>Portfolio</span>
+                        </div>
+                     </div>
+                     <div class="proceess__list" style="overflow-y: scroll;overflow-x:hidden; max-height: 379px;">
+
+                        {% for work in portfolio %}
+                        <div class="process__list-item mb-30" style="padding-right: 3%;">
+                           <div class="process__list-info">
+                              <div class="process__list-icon">
+                                 <img style="width: 83px;height:70px;" src="{{work.mainimage.url}}" alt="">
+                              </div>
+                              <div class="process__list-content">
+                                 <span>{{work.minititle}}</span>
+                                 <h5><a href="#">{{work.title}}</a></h5>
+                              </div>
+                           </div>
+                           <div class="process__list-sp-icon">
+                              <a href="#"><i class="fa-light fa-arrow-right-long"></i></a>
+                           </div>
+                        </div>
+                        {% endfor %}
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- process__area end -->
+
+      <!-- blog__area start -->
+      <section class="blog__area grey-bg-5 pb-120 pt-120" style="padding-top:0px  !important">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6">
+                  <div class="section__wrapper mb-55">
+                     <h4 class="section__title">Daha çox öyrən, bizimlə texnologiyanın nəbzini tut !</h4>
+                     <div class="r-text">
+                        <span>Bloqlar</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-12">
+                  <div class="blog-slider__active swiper-container">
+                     <div class="blog-slider__wrapper swiper-wrapper">
+                        {% for blog in blogs %}
+                        <div class="blog__item  swiper-slide fix">
+                           <div class="blog__thumb" data-background="{{blog.image.url}}"></div>
+                           <div class="blog__content">
+                                 <div class="blog__meta">
+                                    <div class="blog__author">
+                                       <i class="fal fa-calendar-alt"></i>
+                                       <span>{{blog.created_at}}</span>
+                                    </div>
+                                    <div class="blog__catagory">
+                                       <span>{{blog.category.title}}</span>
+                                    </div>
+                                 </div>
+                                 <h5 class="blog__sm-title"><a href="{% url 'blogsingle' blog.slug %}">{{blog.description|slice:60}}</a></h5>
+                                 <div class="blog__btn mt-120">
+                                    <a href="{% url 'blogsingle' blog.slug %}" class="link-btn">
+                                       Daha ətraflı<i class="fal fa-long-arrow-right"></i>
+                                    </a>
+                                 </div>
+                           </div>
+                        </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- blog__area end -->
+
+     </main>
+
+      <!-- footer start -->
+      <footer>
+         <div class="footer-area black-bg-2 pt-100 fix">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4">
+                     <div class="footer__widget mb-40">
+                        <div class="footer__logo">
+                           <a href="{% url 'home' %}" style="display: flex;justify-content:center;align-items:center; width:100%;margin-bottom:auto"><img style="width:30%;filter:opacity(0.8);height:80px;" src="{% static 'azgp_logo2.png' %}" alt=""><div style="display: grid;line-height:14px;color:white;font-weight:600;margin-left:10px;"><span>AzGP</span><span>Engineering</span></div></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
+                     <div class="footer__widget mb-40">
+                        <h5 class="footer__widget-title">Əsas keçidlər</h5>
+                        <div class="footer__widget-content">
+                           <div class="footer__links">
+                              <ul>
+                                 <li ><a href="{% url 'home' %}">Ana Səhifə</a>
+                                   
+                                 </li>
+                                 <li><a href="{% url 'services' %}">Xidmətlərimiz</a>
+                                   
+                                 </li>
+                                 <li ><a href="{% url 'about' %}">Haqqımızda</a>
+                                   
+                         
+               
+                       
+                                  
+                              </ul>
+                        </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
+                     <div class="footer__widget mb-40">
+                        <h5 class="footer__widget-title">Digər keçidlər</h5>
+                        <div class="footer__widget-content">
+                           <div class="footer__links">
+                              <ul>
+                                 <li><a href="{% url 'portfolio' %}">Portfolia</a></li>
+                     
+                             
+                          
+                              <li ><a href="{% url 'blog' %}">Məqalələr</a>
+                                 
+                              
+                              <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+                              </ul>
+                        </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+                     <div class="footer__widget mb-40">
+                        <h5 class="footer__widget-title">Əlaqə</h5>
+                        <div class="footer__widget-content">
+                           <div class="footer__links">
+                              <ul>
+                                 <li><a  href="https://azgpengineering@gmail.com">azgpenginee@gmail.com</a></li>
+                                 <li><a  href="tel:+994507038185">+994507038185</a></li>
+                             
+                              </ul>
+                        </div>
+                        </div>
+                     </div>
+                  </div>
+          
+               </div>
+               <div class="footer__copyright white-bg mt-60">
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="footer__copyright-text">
+                           <p>Copyright & Design By <a href="#">AzGP</a> - 2023</p>
+                        </div>
+                     </div>
+                    
+                  </div>
+               </div>
+            </div>
+            <div class="footer__shape-1">
+               <img src="{% static 'assets/img/footer/footer-shape-1.png' %}" alt="">
+            </div>
+            <div class="footer__shape-2">
+               <img src="{% static 'assets/img/footer/footer-shape-2.png' %}" alt="">
+            </div>
+         </div>
+      </footer>
+      <!-- footer end -->
+<style>
+   .section__wrapper .r-text {
+      position: absolute;
+      left: -10%;
+      bottom: 32%;
+      transform: rotate(-90deg);
+      
+  }
+  .logo{
+   background-color:#0053c5;
+  }
+
+</style>
+      <!-- JS here -->
+      <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'assets/js/vendor/jquery.js' %}"></script>
+      <script src="{% static 'assets/js/vendor/waypoints.js' %}"></script>
+      <script src="{% static 'assets/js/bootstrap-bundle.js' %}"></script>
+      <script src="{% static 'assets/js/meanmenu.js' %}"></script>
+      <script src="{% static 'assets/js/swiper-bundle.js' %}"></script>
+      <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+      <script src="{% static 'assets/js/magnific-popup.js' %}"></script>
+      <script src="{% static 'assets/js/parallax.js' %}"></script>
+      <script src="{% static 'assets/js/backtotop.js' %}"></script>
+      <script src="{% static 'assets/js/nice-select.js' %}"></script>
+      <script src="{% static 'assets/js/counterup.js' %}"></script>
+      <script src="{% static 'assets/js/wow.js' %}"></script>
+      <script src="{% static 'assets/js/isotope-pkgd.js' %}"></script>
+      <script src="{% static 'assets/js/imagesloaded-pkgd.js' %}"></script>
+      <script src="{% static 'assets/js/ajax-form.js' %}"></script>
+      <script src="{% static 'assets/js/main.js' %}"></script>
+   </body>
+
+<!-- Mirrored from wphix.com/html/dustrilox/dustrilox/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 11:46:03 GMT -->
+</html>
