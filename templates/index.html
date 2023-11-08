@@ -166,7 +166,7 @@
                         }
 
                         .language-dropdown .lang-pt .flag {
-                            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZe-6eeYhEfu_wRgTDhsHVD81Aul26OZryxtfgGPuyOA&s");
+                            background-image: url("https://www.iconarchive.com/download/i109141/wikipedia/flags/GB-United-Kingdom-Flag.1024.png");
                             background-size: 60%;
                         }
 
@@ -406,7 +406,7 @@
                         <img src="{{about.image.url}}" alt="">
                      </div>
                      <div class="absp-text absp-text-1">
-                        <i class="flaticon-windmill"></i>
+                        <i class="flaticon-factory"></i>
                         <div class="absp-info">
                            <h5><span class="counter">{{about.project_done}}</span>+</h5>
                            <span class="absm-title">bitirilmiş proekt</span>
@@ -583,7 +583,7 @@
                      <div class="swiper-wrapper">
                         {% for partner in partners %}
                         <div class="brand__slider-item swiper-slide">
-                           <a href="#"><img src="{{partner.image.url}}" alt=""></a>
+                           <a style="max-height: 80px;" href="#"><img src="{{partner.image.url}}" alt=""></a>
                         </div>
                         {% endfor %}
                      </div>
@@ -875,7 +875,9 @@
   .logo{
    background-color:#0053c5;
   }
-
+  .preloader{
+   background-image: url('{% static "globe.gif" %}');
+}
 </style>
       <!-- JS here -->
       <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'assets/js/vendor/jquery.js' %}"></script>
