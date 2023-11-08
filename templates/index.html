@@ -368,7 +368,7 @@
       <section class="slider-area fix">
          <div class="swiper main-slider swiper-container swiper-container-fade">
             <div class="swiper-wrapper p-relative">
-               <!-- {% for head in headers %}
+               {% for head in headers %}
                <div class="item-slider sliderm-height p-relative swiper-slide">
                   <div class="slide-bg" data-background="{{head.mainimage.url}}"></div>
                   <div class="container">
@@ -386,81 +386,63 @@
                      </div>
                   </div>
                </div>
-               {% endfor %} -->
-               <div class="swiper-wrapper p-relative">
-                  <div class="item-slider sliderm-height p-relative swiper-slide">
-                     <div class="slide-bg" data-background="assets/img/slider/slider-01.jpg"></div>
-                     <div class="container">
-                        <div class="row ">
-                           <div class="col-lg-12">
-                              <div class="slider-contant mt-25">
-                                  <span data-animation="fadeInUp" data-delay=".3s">Industrial</span>
-                                  <h2 class="slider-title" data-animation="fadeInUp" data-delay=".6s">Metal Works</h2> 
-                                  <div class="slider-button" data-animation="fadeInUp" data-delay=".9s">
-                                      <a href="services.html" class="tp-btn mr-30">Our Services <i class="fal fa-angle-right"></i></a>
-                                      <a href="about.html" class="tp-btn-2">Learn More</a>
-                                  </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item-slider sliderm-height p-relative swiper-slide">
-                    <div class="slide-bg" data-background="assets/img/slider/slider-02.jpg"></div>
-                    <div class="container">
-                       <div class="row ">
-                          <div class="col-lg-12">
-                             <div class="slider-contant mt-25">
-                                 <span  class="slider-button" data-animation="fadeInUp" data-delay=".3s">Construction</span>
-                                 <h2  class="slider-title" data-animation="fadeInUp" data-delay=".6s">Oil Works</h2> 
-                                 <div class="slider-button" data-animation="fadeInUp" data-delay=".9s">
-                                    <a href="services.html" class="tp-btn mr-30">Our Services <i class="fal fa-angle-right"></i></a>
-                                    <a href="about.html" class="tp-btn-2">Learn More</a>
-                                 </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                  </div>
-                  <div class="item-slider sliderm-height p-relative swiper-slide">
-                    <div class="slide-bg" data-background="assets/img/slider/slider-03.jpg"></div>
-                    <div class="container">
-                       <div class="row ">
-                          <div class="col-lg-12">
-                             <div class="slider-contant mt-25">
-                                 <span data-animation="fadeInUp" data-delay=".2s">Architecture</span>
-                                 <h2 class="slider-title" data-animation="fadeInUp" data-delay=".6s">Interior Works</h2> 
-                                 <div class="slider-button" data-animation="fadeInUp" data-delay=".10s">
-                                    <a href="services.html" class="tp-btn mr-30">Our Services <i class="fal fa-angle-right"></i></a>
-                                    <a href="about.html" class="tp-btn-2">Learn More</a>
-                                 </div>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                  </div>
-                  <div class="item-slider sliderm-height p-relative swiper-slide">
-                  <div class="slide-bg" data-background="assets/img/slider/slider-02.jpg"></div>
-                  <div class="container">
-                     <div class="row ">
-                        <div class="col-lg-12">
-                           <div class="slider-contant mt-25">
-                               <span  class="slider-button" data-animation="fadeInUp" data-delay=".3s">Construction</span>
-                               <h2  class="slider-title" data-animation="fadeInUp" data-delay=".6s">Cotton Works</h2> 
-                               <div class="slider-button" data-animation="fadeInUp" data-delay=".9s">
-                                  <a href="services.html" class="tp-btn mr-30">Our Services <i class="fal fa-angle-right"></i></a>
-                                  <a href="about.html" class="tp-btn-2">Learn More</a>
-                               </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  </div>
-               </div>
+               {% endfor %}
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev ms-button"><i class="far fa-long-arrow-left"></i></div>
             <div class="swiper-button-next ms-button"><i class="far fa-long-arrow-right"></i></div>
+         </div>
+      </section>
+      <section class="main-slider-dot">
+         <div class="container">
+            <div class="swiper main-slider-nav">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <div class="sm-button">
+                        <div class="sm-services__icon">
+                           <i class="flaticon-industrial-robot"></i>
+                        </div>
+                        <div class="sm-services__text">
+                           <span>Service 01</span>
+                           <h4>Industrial Business</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="sm-button">
+                        <div class="sm-services__icon">
+                           <i class="flaticon-industrial"></i>
+                        </div>
+                        <div class="sm-services__text">
+                              <span>Service 02</span>
+                           <h4>Manufacture Factory</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="sm-button">
+                        <div class="sm-services__icon">
+                           <i class="flaticon-manufacturing"></i>
+                        </div>
+                        <div class="sm-services__text">
+                              <span>Service 03</span>
+                           <h4>Scientific Laboratories</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-slide">
+                     <div class="sm-button">
+                        <div class="sm-services__icon">
+                           <i class="flaticon-helmet"></i>
+                        </div>
+                        <div class="sm-services__text">
+                              <span>Service 04</span>
+                           <h4>Financial Corporates</h4>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
       <!-- slider-area-end -->
