@@ -664,7 +664,7 @@
                         <ul>
                            
                            {% for service in services %}
-                           <li><a href="#">{{service.name}}<i class="fa-light fa-arrow-right-long"></i></a></li>
+                           <li><a href="{% url 'servicesingle' service.slug %}">{{service.name}}<i class="fa-light fa-arrow-right-long"></i></a></li>
                            {% endfor %}
                 
                         </ul>
@@ -706,10 +706,10 @@
                         <div class="testimonial__item swiper-slide">
                            <p class="review__text">{{equip.description}}</p>
                            <div class="review__info mt-30">
-                              <a href="#"><img style="width:70px;height:50px;" src="{{equip.image.url}}" alt=""></a>
+                              <a ><img style="width:70px;height:50px;" src="{{equip.image.url}}" alt=""></a>
                               <div class="client__content">
-                                 <h5 class="client__name"><a href="#">{{equip.title}}</a></h5>
-                                 <div class="client__designation"><p>Sahə: <a href="#">{{equip.field}}</a></p></div>
+                                 <h5 class="client__name"><a >{{equip.title}}</a></h5>
+                                 <div class="client__designation"><p>Sahə: <a >{{equip.field}}</a></p></div>
                               </div>
                            </div>
                         </div>
@@ -764,11 +764,11 @@
                               </div>
                               <div class="process__list-content">
                                  <span>{{work.minititle}}</span>
-                                 <h5><a href="#">{{work.title}}</a></h5>
+                                 <h5><a href="{% url 'portfoliosingle' work.slug %}">{{work.title}}</a></h5>
                               </div>
                            </div>
                            <div class="process__list-sp-icon">
-                              <a href="#"><i class="fa-light fa-arrow-right-long"></i></a>
+                              <a href="{% url 'portfoliosingle' work.slug %}"><i class="fa-light fa-arrow-right-long"></i></a>
                            </div>
                         </div>
                         {% endfor %}
