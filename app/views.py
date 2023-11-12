@@ -30,9 +30,9 @@ def create_shared_dictionary(url):
 
     if "/en/" in url:
         
-        your_dict = {'home': 'home', 'articles': 'articles','contact':'contact','portfolio':'portfolio','services':'services'}
+        your_dict = {'home': 'Home', 'articles': 'Articles','contact':'Contact','portfolio':'Portfolio','services':'Services','about':'About'}
     else:
-        your_dict = {'home': 'Ana Səhifə', 'articles': 'Məqalələr','contact':'Əlaqə','portfolio':'Portfolia','services':'Xidmətlərimiz'}
+        your_dict = {'home': 'Ana Səhifə', 'articles': 'Məqalələr','contact':'Əlaqə','portfolio':'Portfolia','services':'Xidmətlərimiz','about':'Haqqımızda'}
     return your_dict
 
 def home(request):
