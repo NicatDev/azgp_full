@@ -265,14 +265,14 @@
                              $("ul.lang-list li").removeClass("selected");
                              $(this).addClass("selected");
                              if ($(this).hasClass('lang-en')) {
-                                 $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-pt");
-                                 $("#lang_selected").html("<p>AZ</p>")
-                                 window.location.href='/'
-                             } else if ($(this).hasClass('lang-pt')) {
-                                 $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
-                                 $("#lang_selected").html("<p>RU</p>")
-                                 window.location.href='/en'
-                             } 
+                              $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-pt");
+                              $("#lang_selected").html("<p>AZ</p>")
+                              window.location.href='/article' 
+                          } else if ($(this).hasClass('lang-pt')) {
+                              $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
+                              $("#lang_selected").html("<p>RU</p>")
+                              window.location.href='/en' + window.location.pathname 
+                          } 
                              $(".language-dropdown").removeClass("open");
                          });
                      })
