@@ -254,50 +254,7 @@
                             -ms-backface-visibility: hidden;
                         }
                     </style>
-                    <script>
-                       
-                     $(document).ready(function () {
-                         $(".lang-flag").click(function () {
-                             $(".language-dropdown").toggleClass("open");
-                             $(".language-dropdown").css(
-                                 { 'overflow': 'visible' }
-                             )
-                         });
-
-                         $("ul.lang-list li").click(function () {
-                             $("ul.lang-list li").removeClass("selected");
-                             $(this).addClass("selected");
-                             if ($(this).hasClass('lang-en')) {
-                              $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-pt");
-                              $("#lang_selected").html("<p>AZ</p>")
-                              let url = window.location.pathname 
-                              var modifiedUrl = url.replace('/en/', '/');
-                              window.location.href=modifiedUrl 
-                          } else if ($(this).hasClass('lang-pt')) {
-                              $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
-                              $("#lang_selected").html("<p>RU</p>")
-                              window.location.href='/en' + window.location.pathname 
-                          } 
-                             $(".language-dropdown").removeClass("open");
-                         });
-                     })
-                     $(document).click(function (e) {
-                         if (!$(e.target).closest(".language-dropdown").length) {
-                             $(".language-dropdown").removeClass("open");
-                         }
-                     });
-                 </script>
-                 <script>
-                     var currentURL = "{{ request.build_absolute_uri }}";
-                     if (currentURL.includes('en/')) {
-                         $("ul.lang-list li").removeClass("selected");
-                   
-                         
-                         $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
-                         $("#lang_selected").html("<p>RU</p>")
-                         $("ul.lang-list li.lang-pt").remove();
-                     }
-                 </script>
+    
                            
                            
                      </div>
@@ -550,6 +507,50 @@
             </div>
          </div>
       </footer>
+      <script>
+                       
+         $(document).ready(function () {
+             $(".lang-flag").click(function () {
+                 $(".language-dropdown").toggleClass("open");
+                 $(".language-dropdown").css(
+                     { 'overflow': 'visible' }
+                 )
+             });
+
+             $("ul.lang-list li").click(function () {
+                 $("ul.lang-list li").removeClass("selected");
+                 $(this).addClass("selected");
+                 if ($(this).hasClass('lang-en')) {
+                  $(".language-dropdown").find(".lang-flag").addClass("lang-en").removeClass("lang-pt");
+                  $("#lang_selected").html("<p>AZ</p>")
+                  let url = window.location.pathname 
+                  var modifiedUrl = url.replace('/en/', '/');
+                  window.location.href=modifiedUrl 
+              } else if ($(this).hasClass('lang-pt')) {
+                  $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
+                  $("#lang_selected").html("<p>RU</p>")
+                  window.location.href='/en' + window.location.pathname 
+              } 
+                 $(".language-dropdown").removeClass("open");
+             });
+         })
+         $(document).click(function (e) {
+             if (!$(e.target).closest(".language-dropdown").length) {
+                 $(".language-dropdown").removeClass("open");
+             }
+         });
+     </script>
+     <script>
+         var currentURL = "{{ request.build_absolute_uri }}";
+         if (currentURL.includes('en/')) {
+             $("ul.lang-list li").removeClass("selected");
+       
+             
+             $(".language-dropdown").find(".lang-flag").addClass("lang-pt").removeClass("lang-en");
+             $("#lang_selected").html("<p>RU</p>")
+             $("ul.lang-list li.lang-pt").remove();
+         }
+     </script>
       <!-- footer end -->
       <style>
          .logo{
