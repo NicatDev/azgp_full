@@ -65,26 +65,26 @@
                            <div class="main-menu">
                               <nav id="mobile-menu">
                                  <ul>
-                                    <li ><a href="{% url 'home' %}">{% if "/en/" in request.path %}Home{% else %}Ana Səhifə {% endif %}</a>
+                                    <li ><a href="{% url 'home' %}">{{nav.home}}</a>
                                       
                                     </li>
-                                    <li><a href="{% url 'services' %}">Xidmətlərimiz</a>
+                                    <li><a href="{% url 'services' %}">{{nav.services}}</a>
                                       
                                     </li>
-                                    <li ><a href="{% url 'about' %}">Haqqımızda</a>
+                                    <li ><a href="{% url 'about' %}">{{nav.about}}</a>
                                       
                             
                   
                           
-                                       <li><a href="{% url 'portfolio' %}">Portfolia</a></li>
+                                       <li><a href="{% url 'portfolio' %}">{{nav.portfolio}}</a></li>
                                    
                                        <!-- class="has-dropdown" -->
                                    
                                 
-                                    <li ><a href="{% url 'blog' %}">Məqalələr</a>
+                                    <li ><a href="{% url 'blog' %}">{{nav.articles}}</a>
                                        
                                     
-                                    <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+                                    <li><a href="{% url 'contact' %}">{{nav.contact}}</a></li>
                                  </ul>
                               </nav>
                            </div>
@@ -489,7 +489,7 @@
                         <div class="footer__widget-content">
                            <div class="footer__links">
                               <ul>
-                                 <li ><a href="{% url 'home' %}">{% if "/en/" in request.path %}Home{% else %}Ana Səhifə {% endif %}</a>
+                                 <li ><a href="{% url 'home' %}">Ana Səhifə</a>
                                    
                                  </li>
                                  <li><a href="{% url 'services' %}">Xidmətlərimiz</a>

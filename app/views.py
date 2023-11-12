@@ -14,6 +14,8 @@ from django.contrib.auth import get_user_model
 from django.http import JsonResponse
 User = get_user_model()
 
+
+
 def set_language(request, lang_code):
     url = request.META.get("HTTP_REFERER", None)
     if lang_code == 'az':
@@ -23,7 +25,19 @@ def set_language(request, lang_code):
         response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
         return response
     
+def create_shared_dictionary(url):
+    
+
+    # Check if the URL contains "/en/"
+    if "/en/" in url:
+    # Define a dictionary
+        your_dict = {'home': 'home', 'articles': 'articles','contact':'contact','portfolio':'portfolio','services':'services'}
+    else:
+        your_dict = {'home': 'Ana Səhifə', 'articles': 'Məqalələr','contact':'Əlaqə','portfolio':'Portfolia','services':'Xidmətlərimiz'}
+    return your_dict
+
 def home(request):
+
     if HomeAbout.objects.exists():
         about = HomeAbout.objects.first()
     partners = Partners.objects.all()
@@ -42,7 +56,9 @@ def home(request):
         'headers':header
   
     }
-    
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'index.html',context)
 
 def blog(request):
@@ -69,7 +85,9 @@ def blog(request):
         'count':count,
         'recent_blogs':recent_blogs
     }
-    
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'blog.html',context)
 
 def blogsingle(request,slug=None):
@@ -84,6 +102,9 @@ def blogsingle(request,slug=None):
         'categories':categories,
         'recent_blogs':recent_blogs
     }
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'blog-details.html',context)
 
 def portfolio(request,slug=None):
@@ -93,6 +114,9 @@ def portfolio(request,slug=None):
         'portfolio':portfolio,
         'fields':fields
     }
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'portfolio.html',context)
 
 
@@ -109,6 +133,9 @@ def portfoliosingle(request,slug=None):
         'fields':fields,
         'recent_works':recent_works
     }
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'portfolio-details.html',context)
 
 
@@ -121,6 +148,9 @@ def services(request):
         'services':services,
         'blogs':blogs
     }
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'services.html',context)
 
 def servicesingle(request,slug=None):
@@ -133,6 +163,9 @@ def servicesingle(request,slug=None):
         'service':service,
         'services':services
     }
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'services-details.html',context)
 
 def contact(request):
@@ -140,6 +173,9 @@ def contact(request):
     context = {
 
     }
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'contact.html',context)
 
 def about(request):
@@ -149,6 +185,9 @@ def about(request):
     context = {
         'about':about
     }
+    current_path = request.path
+    nav = create_shared_dictionary(current_path)
+    context['nav']:nav
     return render(request,'about.html',context)
 
 def message(request):
