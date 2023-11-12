@@ -316,10 +316,38 @@
                </button>
             </div>
             <div class="sidebar__content">
-               <div class="sidebar__logo mb-40">
+               <div class="sidebar__logo mb-40" style="display: flex;align-items: center;gap:7%">
                   <a href="/">
                   <img src="{% static 'azgp_logo2.png' %}" alt="logo">
                   </a>
+                  <div class="dinozavr"
+                  style="display:flex;align-items:center;justify-content:center;gap:2rem;">
+                  <div id="lang_selector" class="language-dropdown">
+                      <label for="toggle" class="lang-flag lang-en" title="Click to select the language">
+                          <span class="flag"></span>
+                      </label>
+                      <ul class="lang-list">
+                          <li class="lang lang-en selected" title="AZ">
+                              <span class="flag"></span>
+                          </li>
+                          <li class="lang lang-pt" title="RU">
+                              <span class="flag"></span>
+                          </li>
+
+                      </ul>
+                  </div>
+
+                  <a href="#0" class="fm-header-bar-1" id="ancaqmobile">
+                      <span class="fm-header-bar-line fm-header-bar-line-1"></span>
+                      <span class="fm-header-bar-line fm-header-bar-line-2"></span>
+                      <span class="fm-header-bar-line fm-header-bar-line-3"></span>
+                  </a>
+                  <!-- <img src=" {% static 'russia.png' %}" alt="">
+         
+          {% static 'azerbaijan.png' %} -->
+
+
+              </div>
                </div>
           
                <div class="mobile-menu fix"></div>
