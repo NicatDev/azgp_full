@@ -284,7 +284,7 @@
                  </script>
                  <script>
                      var currentURL = "{{ request.build_absolute_uri }}";
-                     if (currentURL.endsWith('en/')) {
+                     if (currentURL.includes('en/')) {
                          $("ul.lang-list li").removeClass("selected");
                    
                          
