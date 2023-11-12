@@ -65,7 +65,7 @@
                            <div class="main-menu">
                               <nav id="mobile-menu">
                                  <ul>
-                                    <li ><a href="{% url 'home' %}">Ana Səhifə</a>
+                                    <li ><a href="{% url 'home' %}">{% if "/en/" in request.path %}Home{% else %}Ana Səhifə {% endif %}</a>
                                       
                                     </li>
                                     <li><a href="{% url 'services' %}">Xidmətlərimiz</a>
@@ -489,7 +489,7 @@
                         <div class="footer__widget-content">
                            <div class="footer__links">
                               <ul>
-                                 <li ><a href="{% url 'home' %}">Ana Səhifə</a>
+                                 <li ><a href="{% url 'home' %}">{% if "/en/" in request.path %}Home{% else %}Ana Səhifə {% endif %}</a>
                                    
                                  </li>
                                  <li><a href="{% url 'services' %}">Xidmətlərimiz</a>
