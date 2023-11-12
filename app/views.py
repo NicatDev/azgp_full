@@ -28,9 +28,8 @@ def set_language(request, lang_code):
 def create_shared_dictionary(url):
     
 
-    # Check if the URL contains "/en/"
     if "/en/" in url:
-    # Define a dictionary
+        
         your_dict = {'home': 'home', 'articles': 'articles','contact':'contact','portfolio':'portfolio','services':'services'}
     else:
         your_dict = {'home': 'Ana Səhifə', 'articles': 'Məqalələr','contact':'Əlaqə','portfolio':'Portfolia','services':'Xidmətlərimiz'}
