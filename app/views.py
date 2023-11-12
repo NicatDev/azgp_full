@@ -57,7 +57,7 @@ def home(request):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'index.html',context)
 
 def blog(request):
@@ -86,7 +86,7 @@ def blog(request):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'blog.html',context)
 
 def blogsingle(request,slug=None):
@@ -103,7 +103,7 @@ def blogsingle(request,slug=None):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'blog-details.html',context)
 
 def portfolio(request,slug=None):
@@ -115,7 +115,7 @@ def portfolio(request,slug=None):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'portfolio.html',context)
 
 
@@ -134,7 +134,7 @@ def portfoliosingle(request,slug=None):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'portfolio-details.html',context)
 
 
@@ -149,7 +149,7 @@ def services(request):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'services.html',context)
 
 def servicesingle(request,slug=None):
@@ -164,7 +164,7 @@ def servicesingle(request,slug=None):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'services-details.html',context)
 
 def contact(request):
@@ -174,7 +174,7 @@ def contact(request):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'contact.html',context)
 
 def about(request):
@@ -186,7 +186,7 @@ def about(request):
     }
     current_path = request.path
     nav = create_shared_dictionary(current_path)
-    context['nav']:nav
+    context['nav']=nav
     return render(request,'about.html',context)
 
 def message(request):
