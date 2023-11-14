@@ -331,7 +331,7 @@
                                <span data-animation="fadeInUp" data-delay=".3s" style="font-size:40px; color:rgb(218, 218, 218)">{{head.minititle}}</span>
                                <h2 class="slider-title" data-animation="fadeInUp" style="font-size:85px; color:rgb(250, 250, 250)" data-delay=".6s">{{head.title}}</h2> 
                                <div class="slider-button" data-animation="fadeInUp" data-delay=".9s">
-                                   <a href="{% url 'services' %}" class="tp-btn mr-30">Xidmələrimiz<i class="fal fa-angle-right"></i></a>
+                                   <a href="{% url 'services' %}" class="tp-btn mr-30">{{nav.services}}<i class="fal fa-angle-right"></i></a>
                                    <a href="{% url 'about' %}" class="tp-btn-2">Daha ətraflı</a>
                                </div>
                            </div>
@@ -433,7 +433,7 @@
                      <div class="section__wrapper mb-30">
                         <h4 class="section__title">{{about.title}}</h4>
                         <div class="r-text">
-                           <span>Haqqımızda</span>
+                           <span>{{nav.about}}</span>
                         </div>
                      </div>
                      <p class="abd-text">{{about.description}}.</p>
@@ -580,7 +580,7 @@
             <div class="row">
                <div class="col-xl-12">
                   <div class="brand__title text-center">
-                     <span>Tərəfdaşlarımız</span>
+                     <span>{{nav.partners}}</span>
                   </div>
                </div>
             </div>
@@ -608,9 +608,9 @@
                <div class="col-xl-6 col-lg-6">
                   <div class="feature__left mb-40">
                      <div class="section__wrapper mb-45">
-                        <h4 class="section__title" style="margin-left:3%;">Artıq illərdiki, öz keyfiyyətimizlə sizlərin xidmətindəyik.</h4>
+                        <h4 class="section__title" style="margin-left:3%;">{{}}</h4>
                         <div class="r-text">
-                           <span>Xidmətlərimiz</span>
+                           <span>{{nav.services}}</span>
                         </div>
                      </div>
                      <div class="feature__list">
@@ -646,7 +646,7 @@
             <div class="row">
                <div class="col-xl-6">
                   <div class="section__wrapper mb-45">
-                     <h4 class="section__title">Yüksək standartlara cavab verən cihazlar...</h4>
+                     <h4 class="section__title">{{nav.Devices}}</h4>
                      <div class="r-text">
                         <span>Texnologiya</span>
                      </div>
@@ -702,7 +702,7 @@
                <div class="col-xl-6">
                   <div class="process__right">
                      <div class="section__wrapper mb-55">
-                        <h4 class="section__title">Gördüyümüz işlər</h4>
+                        <h4 class="section__title">Portfolio</h4>
                         <div class="r-text">
                            <span>Portfolio</span>
                         </div>
@@ -740,9 +740,9 @@
             <div class="row">
                <div class="col-xl-6">
                   <div class="section__wrapper mb-55">
-                     <h4 class="section__title">Daha çox öyrən, bizimlə texnologiyanın nəbzini tut !</h4>
+                     <h4 class="section__title">{{nav.blogtitle}}</h4>
                      <div class="r-text">
-                        <span>Məqalələr</span>
+                        <span>{{nav.articles}}</span>
                      </div>
                   </div>
                </div>
