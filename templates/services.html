@@ -351,7 +351,7 @@
                         <h5 class="ser__title mb-10"><a href="{% url 'servicesingle' service.slug %}">{{service.name|safe}}</a></h5>
                         <p>{{service.description|slice:79}}</p>
                         <div class="ser__more-option mt-15">
-                           <a href="{% url 'servicesingle' service.slug %}">Daha ətraflı <i class="fal fa-long-arrow-right"></i></a>
+                           <a href="{% url 'servicesingle' service.slug %}">{{nav.learn}}<i class="fal fa-long-arrow-right"></i></a>
                         </div>
                      </div>
                   </div>
@@ -408,7 +408,7 @@
                         <h5 class="blog__sm-title"><a href="{% url 'blogsingle' blog.slug %}">{{blog.title}}</a></h5>
                      </div>
                      <div class="blog__btn-2">
-                        <a href="{% url 'blogsingle' blog.slug %}" class="link-btn">Daha ətraflı <i class="fal fa-long-arrow-right"></i></a>
+                        <a href="{% url 'blogsingle' blog.slug %}" class="link-btn">{{nav.learn}} <i class="fal fa-long-arrow-right"></i></a>
                      </div>
                   </div>
                </div>
